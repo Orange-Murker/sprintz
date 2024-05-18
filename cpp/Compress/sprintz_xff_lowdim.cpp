@@ -386,6 +386,7 @@ do_rle:
 main_loop_end:
 
     free(errs);
+    free(coef_counters_ar);
     free(dims_nbits);
     free(header_bytes);
 

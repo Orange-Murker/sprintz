@@ -536,6 +536,7 @@ main_loop_end:
     free(stripe_bitoffsets);
     free(stripe_masks);
     free(stripe_headers);
+    free(header_bytes);
     free(errs);
 
     // printf("wrote ngroups: %d\n", (int)ngroups);

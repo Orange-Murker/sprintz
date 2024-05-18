@@ -346,6 +346,7 @@ int64_t compress_rowmajor(const uint_t* src, uint32_t len, int_t* dest,
     free(stripe_bitoffsets);
     free(stripe_masks);
     free(stripe_headers);
+    free(header_bytes);
 
     uint32_t remaining_len = (uint32_t)(len - (src - orig_src));
     // printf("read src bytes: %lu\n", (uint32_t)(src - orig_src));
@@ -998,6 +999,7 @@ int64_t compress_rowmajor_delta(const uint_t* src, uint32_t len, int_t* dest,
     free(stripe_bitoffsets);
     free(stripe_masks);
     free(stripe_headers);
+    free(header_bytes);
     free(deltas);
 
     uint32_t remaining_len = (uint32_t)(len - (src - orig_src));

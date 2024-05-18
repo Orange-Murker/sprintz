@@ -296,6 +296,7 @@ main_loop_end:
     free(stripe_bitoffsets);
     free(stripe_masks);
     free(stripe_headers);
+    free(header_bytes);
     free(errs);
 
     uint32_t remaining_len = (uint32_t)(len - (src - orig_src));
@@ -616,6 +617,7 @@ int64_t decompress8b_rowmajor_xff(const int8_t* src, uint8_t* dest) {
     free(data_masks);
     free(stripe_bitwidths);
     free(stripe_bitoffsets);
+    free(errs_ar);
 
     // copy over trailing data
     size_t remaining_len = orig_len - (dest - orig_dest);

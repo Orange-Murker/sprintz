@@ -393,6 +393,7 @@ main_loop_end:
     free(stripe_bitoffsets);
     free(stripe_masks);
     free(stripe_headers);
+    free(header_bytes);
     free(deltas);
 
     uint32_t remaining_len = (uint32_t)(src_end - src);
